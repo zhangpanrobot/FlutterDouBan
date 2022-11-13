@@ -553,7 +553,8 @@ class _FloatingAppBarState extends State<_FloatingAppBar> {
   }
 
   RenderSliverFloatingPersistentHeader _headerRenderer() {
-    return context.findAncestorRenderObjectOfType<RenderSliverFloatingPersistentHeader>();
+    return context
+        .findAncestorRenderObjectOfType<RenderSliverFloatingPersistentHeader>();
   }
 
   void _isScrollingListener() {
@@ -1097,8 +1098,10 @@ class _SliverAppBarState extends State<SliverAppBar>
 
   void _updateSnapConfiguration() {
     if (widget.snap && widget.floating) {
+      // ignore: todo
+      // TODO: vsync: this
       _snapConfiguration = FloatingHeaderSnapConfiguration(
-        vsync: this,
+        // vsync: this,
         curve: Curves.easeOut,
         duration: const Duration(milliseconds: 200),
       );
@@ -1124,7 +1127,7 @@ class _SliverAppBarState extends State<SliverAppBar>
   Widget build(BuildContext context) {
     assert(!widget.primary || debugCheckHasMediaQuery(context));
     final double topPadding = 0.0;
-     final double collapsedHeight = widget.bottom.preferredSize.height + 26.0;
+    final double collapsedHeight = widget.bottom.preferredSize.height + 26.0;
 //    final collapsedHeight = 80.0;
 
     return MediaQuery.removePadding(
