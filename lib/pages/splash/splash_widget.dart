@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:doubanapp/pages/container_page.dart';
 import 'package:doubanapp/util/screen_utils.dart';
 import 'package:doubanapp/constant/constant.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 ///打开APP首页
 class SplashWidget extends StatefulWidget {
   @override
